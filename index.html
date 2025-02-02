@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, initial-scale=1, user-scalable=no">
+    <title>CoolWeather</title>
+    <link href="styles.css" rel="stylesheet" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+    </style>
+    
+    
+</head>
+<body>
+    <div class="generic">
+        <h1>Philadelphia, PA</h1>
+        <button class="dropdown-btn" onclick="toggleDropdown()">▼</button>
+        <div class="dropdown-content" id="dropdown">
+            <div class="city">New York, NY</div>
+            <div class="city">San Francisco, CA</div>
+            <div class="city">Chicago, IL</div>
+            <div class="city">Boston, MA</div>
+        </div>
+    </div>
+    <div class="hourly">
+        <div class="hour-item">
+            <div class="time">8 AM</div>
+            <div class="temp">28°F</div>
+        </div>
+        <div class="hour-item">
+            <div class="time">9 AM</div>
+            <div class="temp">29°F</div>
+        </div>
+        <div class="hour-item">
+            <div class="time">10 AM</div>
+            <div class="temp">31°F</div>
+        </div>
+        <div class="hour-item">
+            <div class="time">11 AM</div>
+            <div class="temp">32°F</div>
+        </div>
+        <div class="hour-item">
+            <div class="time">12 PM</div>
+            <div class="temp">34°F</div>
+        </div>
+        <div class="hour-item">
+            <div class="time">1 PM</div>
+            <div class="temp">36°F</div>
+        </div>
+        <div class="hour-item">
+            <div class="time">2 PM</div>
+            <div class="temp">37°F</div>
+        </div>
+        <div class="hour-item">
+            <div class="time">3 PM</div>
+            <div class="temp">36°F</div>
+        </div>
+        <div class="hour-item">
+            <div class="time">4 PM</div>
+            <div class="temp">34°F</div>
+        </div>
+        <div class="hour-item">
+            <div class="time">5 PM</div>
+            <div class="temp">33°F</div>
+        </div>
+    </div>
+    <div class="generic">
+        <h2>Insights</h2>
+        <button class="dropdown-btn" onclick="toggleDropdown()">▼</button>
+    </div>
+    <div class="container">
+        <div class="draggable-row" draggable="true">
+            <img src="https://openweathermap.org/img/wn/02d.png" alt="Sunset">   Sunset Time: 5:19 PM
+        </div>
+        <div class="draggable-row" draggable="true">
+            <img src="https://openweathermap.org/img/wn/01d.png" alt="Sun">   Air Quality: Low</div>
+        <div class="draggable-row" draggable="true">
+            <img src="https://openweathermap.org/img/wn/50d.png" alt="Air">   UV Index: 6 - high</div>
+    </div>
+
+    <div class="month"><h2>February</h2></div>
+    <div class="calendar">
+        <div class="weekday">Sun</div>
+        <div class="weekday">Mon</div>
+        <div class="weekday">Tue</div>
+        <div class="weekday">Wed</div>
+        <div class="weekday">Thu</div>
+        <div class="weekday">Fri</div>
+        <div class="weekday">Sat</div>
+
+        <div></div>
+        <div class="day"><div class="day-number">1</div> 34°F</div>
+        <div class="day"><div class="day-number">2</div> 33°F</div>
+        <div class="day"><div class="day-number">3</div> 39°F</div>
+        <div class="day"><div class="day-number">4</div> 41°F</div>
+        <div class="day"><div class="day-number">5</div> 40°F</div>
+        <div class="day"><div class="day-number">6</div> 42°F</div>
+        <div class="day"><div class="day-number">7</div> 44°F</div>
+        <div class="day"><div class="day-number">8</div> 52°F</div>
+        <div class="day"><div class="day-number">9</div> 48°F</div>
+        <div class="day"><div class="day-number">10</div> 43°F</div>
+        <div class="day"><div class="day-number">11</div> 41°F</div>
+        <div class="day"><div class="day-number">12</div> 35°F</div>
+        <div class="day"><div class="day-number">13</div> 37°F</div>
+        <div class="day"><div class="day-number">14</div> 33°F</div>
+        <div class="day"><div class="day-number">15</div> 40°F</div>
+        <div class="day"><div class="day-number">16</div> 42°F</div>
+        <div class="day"><div class="day-number">17</div> 48°F</div>
+        <div class="day"><div class="day-number">18</div> 45°F</div>
+        <div class="day"><div class="day-number">19</div> 40°F</div>
+        <div class="day"><div class="day-number">20</div> 39°F</div>
+        <div class="day"><div class="day-number">21</div> 32°F</div>
+        <div class="day"><div class="day-number">22</div> 33°F</div>
+        <div class="day"><div class="day-number">23</div> 39°F</div>
+        <div class="day"><div class="day-number">24</div> 34°F</div>
+        <div class="day"><div class="day-number">25</div> 31°F</div>
+        <div class="day"><div class="day-number">26</div> 42°F</div>
+        <div class="day"><div class="day-number">27</div> 53°F</div>
+        <div class="day"><div class="day-number">28</div> 52°F</div>
+        <div class="day"><div class="day-number">29</div> 57°F</div>
+    </div>
+
+
+    <script>
+        /** Location dropdown */
+        function toggleDropdown() {
+            document.getElementById("dropdown").classList.toggle("active");
+        }
+
+        document.addEventListener("click", function (event) {
+            const dropdown = document.getElementById("dropdown");
+            const button = document.querySelector(".dropdown-btn");
+
+            if (!dropdown.contains(event.target) && !button.contains(event.target)) {
+                dropdown.classList.remove("active");
+            }
+        });
+
+        function changeLocation(city) {
+            document.querySelector(".generic h1").textContent = city;
+            document.getElementById("dropdown").classList.remove("active");
+        }
+
+        /** Hourly forecast */
+        document.addEventListener("DOMContentLoaded", function () {
+            const container = document.querySelector('.hourly');
+            const middlePosition = (container.scrollWidth - container.clientWidth) / 2;
+            container.scrollLeft = middlePosition;
+        });
+
+        function scrollCarousel(direction) {
+            const container = document.querySelector('.hourly');
+            const scrollAmount = 120;
+            container.scrollBy({
+                left: direction * scrollAmount,
+                behavior: "smooth"
+            });
+        }
+
+        /** Customizable insights */
+        const rows = document.querySelectorAll(".draggable-row");
+        let dragElem = null;
+
+        rows.forEach(row => {
+            row.addEventListener("dragstart", function (e) {
+                dragElem = this;
+                e.dataTransfer.effectAllowed = "move";
+                e.dataTransfer.setData("text/plain", this.innerHTML);
+                this.classList.add("dragging");
+            });
+
+            row.addEventListener("dragover", function (e) {
+                e.preventDefault();
+            });
+
+            row.addEventListener("drop", function (e) {
+                e.preventDefault();
+                if (dragElem !== this) {
+                    let temp = dragElem.innerHTML;
+                    dragElem.innerHTML = this.innerHTML;
+                    this.innerHTML = temp;
+                }
+            });
+
+            row.addEventListener("dragend", function () {
+                this.classList.remove("dragging");
+            });
+        });
+    </script>
+</body>
+</html>

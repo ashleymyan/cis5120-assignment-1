@@ -1,0 +1,174 @@
+.generic {
+    width: 100%;
+    height: 60px;
+    gap: 8px;
+    font-family: Arial, sans-serif;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.dropdown-btn {
+    background: none;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background: white;
+    top: 100%; 
+    border: 1px solid #ccc;
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    margin-top: 5px;
+    z-index: 1000;
+    width: 250px;
+}
+
+.city {
+    padding: 10px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.dropdown-content.active {
+    display: block;
+}
+
+.city:hover {
+    background: #f1f1f1;
+}
+
+/** Hourly forecast */
+.hourly-container {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hourly {
+    display: flex;
+    overflow-x: auto;
+    scroll-behavior: smooth;
+    white-space: nowrap;
+    width: 90%;
+    padding: 10px;
+}
+
+
+.hour-item {
+    flex: 0 0 auto;
+    width: 120px;
+    height: 150px;
+    margin: 5px;
+    background: #87CEEB;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px;
+}
+
+.time {
+    font-size: 1rem;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.temp {
+    font-size: 1.5rem;
+}
+
+
+/** Customizable insights */
+.container {
+    width: 95%;
+    margin: auto;
+    padding: 8px;
+}
+
+.draggable-row {
+    background: #87CEEB;
+    color: white;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    margin: 5px 0;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: grab;
+    border-radius: 5px;
+    user-select: none;
+}
+
+.draggable-row img {
+    width: 25px;
+    height: 25px;
+}
+
+.dragging {
+    opacity: 0.5;
+    background: darkblue;
+}
+
+
+/** Calendar */
+.month {
+    width: 100%;
+    height: 50px;
+    font-family: Arial, sans-serif;
+    font-size: 18px;
+    text-align: center;
+    padding: 20px;
+}
+
+.calendar {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: auto;
+    gap: 5px;
+    max-width: 700px;
+    margin: auto;
+    padding: 10px;
+    font-family: Arial, sans-serif;
+}
+
+.day {
+    background: #87CEEB;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    height: 50px;
+    font-size: 21px;
+}
+
+.day img {
+    width: 30px;
+    height: 30px;
+}
+
+.day-number {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+.weekday {
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+}
+
